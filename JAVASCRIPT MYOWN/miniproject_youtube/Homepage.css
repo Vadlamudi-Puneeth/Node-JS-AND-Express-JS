@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.entire-card{
+    margin-bottom: 0.8rem;
+    cursor: pointer;
+}
+
+.entire-card:hover{
+    background-color: antiquewhite;
+}
+
+.card-video-thumbnail img{
+    width: 100%;
+}
+
+.card-video-authorthumbnail img{
+    border-radius: 100%;
+    margin: auto;
+}
+
+.card-video-description{
+    display: flex;
+    gap:1.5rem;
+    padding: 1.5rem;
+}
+
+.card-video-count{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+aside{
+    display: block;
+}
+
+header{
+    display: block;
+}
+
+
+
+.dot{
+    height:5px;
+    width: 5px;
+    background-color: black;
+    border-radius: 100%;
+}
+
+@media(width >= 600px){
+    #root{
+            display: grid;
+            gap:1.5rem;
+            margin: 1.5rem 1rem;
+            grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+            padding: 1.5rem;
+        }
+
+    .both-aside-and-root{
+            display: grid;
+            grid-template-columns: 20rem 1fr; 
+            /* The above is like first column is 20 rem and another is remaining space */
+        }
+    
+    .aside-objects{
+            display: block;
+            background-color: black;
+            grid-row-start:1 ;   
+            grid-row-end: 3;   
+        }
+    
+    header{
+            /* grid-column: 1/-1; */
+            /* 
+            Grid Lines:   1               2              3
+                           |   SIDEBAR     |  MAIN CONTENT |
+                           |---------------|---------------|
+header:  -->               |               HEADER           |
+                           |-------------------------------|
+
+            */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 5rem;
+        }
+
+        .search-container{
+            display: flex;
+            width:60%;
+        }
+
+        .search-container input{
+            padding: 0.5rem 1rem;
+            flex-grow: 1;
+            border-top-left-radius: 0.75rem;
+            border-bottom-left-radius: 0.75rem;
+        }
+
+        .search-container button{
+            border-top-right-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+        }
+
+        #search-suggestions-container{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            padding:0.35rem;
+            margin-top:36px;
+            background-color: aliceblue;
+            gap:0.25rem;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+        }
+        
+        #search-suggestions-container p{
+            cursor: pointer;
+            padding: 6px;
+            border-bottom: 1px solid lightgray;
+            transition: all 300ms ease-in-out;
+        }
+
+        #search-suggestions-container p:hover{
+            background-color: bisque;
+            padding: 10px;
+        }
+
+}

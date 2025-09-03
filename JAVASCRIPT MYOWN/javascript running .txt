@@ -1,0 +1,299 @@
+
+// Function Definition
+function funcName(){
+
+}
+// Function Calling
+funcName();
+
+-- Return
+
+return keyword is used to return some value from function
+
+-- Scope
+     This determines the accessibility of variables, objects, and functions from different parts of the code
+	1. Function Scope -- Variable which are defined inside the function are not accessible outside the function
+	2. Block Scope    -- Variables declared inside a {} block cannot be accessed from outside the block
+	3. Lexical Scope  -- A variable defined outside the function can be accissible inside the other function defined after the variable declaration
+		The opposite is not true
+		
+-- this keyword
+   Refers to an object that is executing the current piece of code
+   
+-- Try & Catch
+
+   The try statement allows you to define a block of code to be tested for errors while it being executed 
+   The catch statement allows you to define a block of code to be executed, if an error occurs in the try block
+   
+-- Arrow function
+
+	function value stored in the variable
+
+-- setTimeout function
+   If we want to complete our task after some time then we will use this function
+   setTimeout(function, timeout);
+   timeout is in milliseconds
+   
+-- setInterval function
+	setInterval(function,timeout);
+	This will print so many time after every timeout
+	
+-- ArrayMethods
+   arr.forEach(some function definition or name)
+
+-- map
+   let newArr = arr.map(some function definition or name)
+   
+-- Every 
+   Returns true if every element of array gives true for some functions. Else returns false
+   arr.every(some function definition or name)
+   
+-- Some
+   Returns true if some of elemets of an array is true
+   arr.some(some function definition or name)
+   
+-- Reduce
+   Reduces the array into single value
+   arr.reduce(reducer function with 2 variables for (accumulator, element));
+   Here accumulator will always carries the above return values to next iteration
+   
+-- Default parameters 
+   Giving a default values to the parameters
+   function fun(a,b=2){
+   }
+   fun(2);
+   
+-- Spread
+   Expand an iterable into multiple values
+   
+-- Rest
+   Allows a function to take an indefinite number of arguments and bundle them in array
+   
+-- Destructuring
+   Storing values of arrays into multiple variables
+   
+-- what is DOM
+   Document Object model it represents a document with a logical tree
+   It allows us to manipulate/change webpage content (HTML elements)
+   
+	we can check the dom properties using console.dir(document) .dir() gives all properties and .log() just print\
+	if we want to see all the objects then console.dir(document.all)
+	practical: console.dir(document.all[8])
+		   	document.all[8].innerText = "Peter parker"
+				'Peter parker'
+				
+-- Selecting Elements
+   1.getElementById: Returns the elements as an object or null(if not found)
+   practical:- To access images
+				document.getElementById("fantasy")
+				let obj = document.getElementById("fantasy");
+				console.dir(obj)
+   2.getElementByClassName: Returns the elements as an HTML collection or empty collection (if not found)
+   3.getElementByTagName: Returns the Elements as an HTML Collection or empty collection (if not found)
+   
+-- Query Selectors
+   Allows us to use any CSS selector
+   document.querySelector('p'); // This will select the first paragraph tag
+   document.querySelector('#myId')
+   document.querySelector('.myClass')
+   document.querySelector('p'); // This will select all the paragraph tags
+  
+-- Using Properties and methods
+   
+   innerText
+   Shows the visible text contained in a node
+   
+   textContent
+   Shows all the full text
+   
+   innerHTML
+   shows the full markup
+   
+-- Manipulation Attributes
+   
+   obj.getAttribute(attr)
+   obj.setAttribute(attr, val)
+   Ex: let image = document.querySelector("img")
+	   image.getAttribute('id');
+	   image.setAttribute('id','spider'); // Here spider is the new id name the css of previous won't work for new one
+	   
+-- Manipulating style
+   style property
+   obj.style
+   
+-- for changing the css property
+   let heading = document.querySelector('h1');
+   heading.color = 'pink';
+   heading.style.color = 'pink';
+	
+-- using classList
+   obj.classList
+   
+   classList.add() to add new classes
+   classList.remove() to remove classes
+   classList.contains() to check if class Exists
+   classList.toggle() to toggle between add & remove
+	
+   heading.classList.add("green"); //here we can write the css for .green class and that style will be added to heading id
+   heading.classList.remove("green");
+   heading.classList.contains('green');
+   heading.classList.toggle('green'); // if it is on then it will off vice versa
+   
+-- Navigation
+   parentElement -- h2.parentElement
+   children -- about.children and about.childElementCount
+   previousElementSibling | nextElementSibling -- h2.nextSibling and h2.previousElementSibling
+   
+-- Adding Elements
+   document.createElement('p') -- let newp = document.createElement('p');
+   .appendChild(element)
+   .append(element)
+   .prepend(element)
+   .insertAdjacentElement(where, element)
+   
+   Above practical :- 
+   let newp = document.createElement('p');
+   let body = document.querySelector('body');
+   body.appendChild(newp); // this will add the newp in last
+   
+   let btn = document.createElement('button')
+   body.appendChild(btn);
+   btn.innerText = 'click me';
+   
+   let p = document.querySelector('p');
+   let btn = document.createElement('button')
+   p.insertAdjacentElement('beforebegin',btn);
+   p.insertAdjacentElement('afterbegin',btn);
+   
+   
+-- Removing Elements
+   removeChild(element)
+   remove(element)
+   
+-- DOM Events
+   Events are signals that something has occured. (user inputs / actions)	
+   <button onclick="console.log('button was clicked'); console.log('fnsj')" >click me</button>
+   
+--  onclick (when the elements in clicked
+    let btn = document.querySelector("button")
+	console.dir(btn)
+    practical1:
+	btn.onclick = function(){
+		console.log("This is javascript button");
+	}
+	practical2:
+	function sayHello(){
+    console.log('Hello');
+	}
+	btn.onclick = sayHello;
+
+	practical3:
+
+	let btn = document.querySelectorAll("button")
+
+	function sayHello(){
+		console.log('Hello');
+	}	
+
+	for(btns of btn){
+		btns.onclick = sayHello;
+	}
+
+
+-- onmouseenter (when mouse enters an element)
+   // if we just put our cursor on that it will automatically printed
+	btn.onmouseenter = function(){
+    console.log("mouse ebfe");
+	}
+
+-- Event Listners
+   addEventListners
+   element.addEventListners(event, callback)
+   
+   btn.addEventListener("click", sayHello);
+   btn.addEventListener("click", sayName);
+   
+   Use: we use the addEventListners because we cannot print more that one function simultaneously using onclick that's y we used to do addEventListner
+   
+-- this in EventListeners
+   when 'this' is used in a callback of event handler of something, it refers to do something.
+  
+  let btn = document.querySelector("button");
+  btn.addEventListener("click", function(){
+		console.log(this.innerText)
+  })
+  
+-- Keyboard Events
+	let btn = document.querySelector("button")
+	btn.addEventListener('click', function(event){
+		console.log(event);
+		console.log('button clicked');
+	})
+	
+	
+	let input = document.querySelector("input");
+	input.addEventListener('keyup', function(event){
+	    console.log(event);
+	    console.log(event.key);
+	    console.log(event.code);
+		console.log('key was released');
+	})
+	
+-- Form Events
+   let form = document.querySelector("form");
+form.addEventListener('submit', function(event){
+    event.preventDefault();
+    alert('your form is submitted sucessfully');
+})
+
+-- Extractiong form data
+	let form = document.querySelector('form')
+
+	form.addEventListener('submit', function(event){
+		event.preventDefault();
+		let inp = document.querySelector('input');
+		// console.log(inp.innerText);//this wont work
+		console.dir(inp);
+		console.log(inp.value);
+	})
+
+    let form = document.querySelector('form')
+
+	form.addEventListener('submit', function(event){
+		
+		event.preventDefault();
+		
+		let user = document.querySelector("#user");
+		let pass = document.querySelector("#pass");
+
+		console.log(user.value)
+		console.log(pass.value)})
+		
+-- change event
+   The change event occurs when the value of an element has been changed (only works on <input>,<textarea> and <select> elements).
+   
+-- input event
+   The input event fires when the value of an <input>, <select>, or <textarea> element has been changed
+ 
+			let user = document.querySelector("#user");
+		let form = document.querySelector("form");
+		form.addEventListener('submit',function(event){
+			event.preventDefault(); //This will use to not redirect after clicking on submit
+		})
+
+		user.addEventListener('input', function(event){
+			console.log('input changed')
+			console.log("final value" + this.value);
+		})
+
+	// above if we enter and click anywhere it will on concole
+	
+	input will do the things like every character it will show
+
+
+ 
+
+
+
+
+

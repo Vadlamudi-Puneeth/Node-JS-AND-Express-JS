@@ -1,0 +1,26 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>utube</title>
+        <link rel="stylesheet" href="./Homepage.css">
+    </head>
+
+    <body>
+
+        <div class="both-aside-and-root">
+            <header>
+                <div class="search-container">
+                    <input type="text" name="search-box" onkeyup="handleAutoAPISuggest(event)" id="search-text-input" />
+                    <button onclick="handleSearch()" >Search</button>
+                    <div id="search-suggestions-container" ></div>
+                </div>
+            </header>
+            <aside class="aside-objects">hu</aside>
+            <div id="root" ></div>
+        </div>
+
+        <script src="./Homepage.js" ></script>
+    </body>
+
+</html>

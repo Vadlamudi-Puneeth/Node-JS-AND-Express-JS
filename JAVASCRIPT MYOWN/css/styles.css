@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
+}
+
+.green{
+  color: gold;
+  text-decoration: underline black;
+}
+#green{
+  color: gold;
+  text-decoration: underline black;
+}
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+#spiderman-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.about, .creation {
+  margin-bottom: 30px;
+}
+
+.about a,
+.creation a,
+.publication-info a {
+  color: #3366cc;
+  text-decoration: none;
+}
+
+.about a:hover,
+.creation a:hover,
+.publication-info a:hover {
+  text-decoration: underline;
+}
+
+.publication-info {
+  background-color: #e0e0e0;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+.publication-info h3 {
+  margin-top: 0;
+}
+
+.publication-info ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.publication-info ul li {
+  margin-bottom: 8px;
+}
+
+.creation p {
+  background-color: #f5e7c0;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.comic-covers {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.comic-covers img {
+  width: 150px;
+  height: auto;
+  border: 1px solid #ccc;
+}

@@ -1,0 +1,13 @@
+.card div{
+    background-color: navajowhite;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+}
+
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    gap:2rem;
+    padding: 2rem;
+}
+

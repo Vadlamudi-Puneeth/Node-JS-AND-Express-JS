@@ -1,0 +1,16 @@
+nav h3{
+    color: purple;
+}
+
+.nav_bar{
+    display: flex;
+    background-color: pink;
+    padding: 2rem 2rem;
+}
+
+.three_links{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-left: auto;
+}

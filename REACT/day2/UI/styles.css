@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html,body{
+    height: 100%;
+}
+
+header{
+    background-color: blueviolet;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+header a{
+    color: white;
+    font-weight: 800;
+    font-size:1.25rem;
+    cursor: pointer;
+}
+
+main{
+    background-color: lightblue;
+    padding: 3rem 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.card{
+    background-color: aliceblue;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: grid;
+    width: 30%;
+    border: 2px solid green;
+}
+
+footer{
+    background-color: blueviolet;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    bottom: 0;
+    position: sticky;
+}
